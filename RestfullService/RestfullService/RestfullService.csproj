@@ -1,0 +1,96 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\uif23315\.nuget\packages\contiteves.edm.common\2.6.15\contentFiles\any\netstandard2.0\ContiTeves.EDM\Common\XML Schemes\ECU-HW-EDM_MetaData.xsd" />
+    <Content Remove="C:\Users\uif23315\.nuget\packages\contiteves.edm.common\2.6.15\contentFiles\any\netstandard2.0\ContiTeves.EDM\Common\XML Schemes\Ecu_Xml.xsd" />
+    <Content Remove="C:\Users\uif23315\.nuget\packages\contiteves.edm.common\2.6.15\contentFiles\any\netstandard2.0\ContiTeves.EDM\Common\XML Schemes\Flashmem.xsd" />
+    <Content Remove="C:\Users\uif23315\.nuget\packages\contiteves.edm.common\2.6.15\contentFiles\any\netstandard2.0\ContiTeves.EDM\Common\XML Schemes\Hecu_Xml.xsd" />
+    <Content Remove="C:\Users\uif23315\.nuget\packages\contiteves.edm.common\2.6.15\contentFiles\any\netstandard2.0\ContiTeves.EDM\Common\XML Schemes\Hecu_Xml_detailed.xsd" />
+    <Content Remove="C:\Users\uif23315\.nuget\packages\contiteves.edm.common\2.6.15\contentFiles\any\netstandard2.0\ContiTeves.EDM\Common\XML Schemes\HW-EDM_MetaData.xsd" />
+    <Content Remove="C:\Users\uif23315\.nuget\packages\contiteves.edm.common\2.6.15\contentFiles\any\netstandard2.0\ContiTeves.EDM\Common\XML Schemes\KeyLogistic.xsd" />
+    <Content Remove="C:\Users\uif23315\.nuget\packages\contiteves.edm.common\2.6.15\contentFiles\any\netstandard2.0\ContiTeves.EDM\Common\XML Schemes\Keyword2FlashAddress.xsd" />
+    <Content Remove="C:\Users\uif23315\.nuget\packages\contiteves.edm.common\2.6.15\contentFiles\any\netstandard2.0\ContiTeves.EDM\Common\XML Schemes\ProducibilityProtocol.xsd" />
+    <Content Remove="C:\Users\uif23315\.nuget\packages\contiteves.edm.common\2.6.15\contentFiles\any\netstandard2.0\ContiTeves.EDM\Common\XML Schemes\RamOkTemplate.xsd" />
+    <Content Remove="C:\Users\uif23315\.nuget\packages\contiteves.edm.common\2.6.15\contentFiles\any\netstandard2.0\ContiTeves.EDM\Common\XML Schemes\RamOkTemplate_DynamicFailureBitmap.xsd" />
+    <Content Remove="C:\Users\uif23315\.nuget\packages\contiteves.edm.common\2.6.15\contentFiles\any\netstandard2.0\ContiTeves.EDM\Common\XML Schemes\RamXml.xsd" />
+    <Content Remove="C:\Users\uif23315\.nuget\packages\contiteves.edm.common\2.6.15\contentFiles\any\netstandard2.0\ContiTeves.EDM\Common\XML Schemes\SecretConstantKeyRing.xsd" />
+    <Content Remove="C:\Users\uif23315\.nuget\packages\contiteves.edm.common\2.6.15\contentFiles\any\netstandard2.0\ContiTeves.EDM\Common\XML Schemes\wwEcu.xsd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="{bee4bfec-6683-3e67-9167-3c0cbc68f40a}">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>4</VersionMinor>
+      <VersionMajor>2</VersionMajor>
+      <Guid>bee4bfec-6683-3e67-9167-3c0cbc68f40a</Guid>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ContiTeves.Common" Version="1.5.15" />
+    <PackageReference Include="ContiTeves.EDM.Client.EDMClient" Version="2.4.1" />
+    <PackageReference Include="ContiTeves.EDM.Client.EDMClient.Base" Version="3.3.2" />
+    <PackageReference Include="ContiTeves.EDM.Common" Version="2.6.15" />
+    <PackageReference Include="ContiTeves.Productionline.Misc" Version="1.4.4" />
+    <PackageReference Include="Swashbuckle" Version="5.6.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ContiTeves.Productionline.Misc">
+      <HintPath>..\..\Productionline.RamReadFileWcfService3\packages\ContiTeves.Productionline.Misc.1.3.0-dev-20180719110405\lib\net35\ContiTeves.Productionline.Misc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Models\XdlRamReadFile.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App_Data\XPCRamReadTemplateFiles\FLUX.xprt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App_Data\XPCRamReadTemplateFiles\FLUX2.xprt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App_Data\XPCRamReadTemplateFiles\FLUX_MIB.xprt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App_Data\XPCRamReadTemplateFiles\FLUX_MKC.xprt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App_Data\XPCRamReadTemplateFiles\PS_E1.xprt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App_Data\XPCRamReadTemplateFiles\PS_E5.xprt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App_Data\XPCRamReadTemplateFiles\PS_MIB_E3.xprt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App_Data\XPCRamReadTemplateFiles\PS_MIB_E4.xprt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App_Data\XPCRamReadTemplateFiles\YA.xprt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+
+</Project>

@@ -1,0 +1,34 @@
+﻿|+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+| Automatically created FLUX read-out file
+| for ECU-SW '%ESW', SW-Config-P/N '%SWP'
+|+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|
+|DYN:%001:AV_CAL_CUR_I0FL:
+|DYN:%002:AV_CAL_CUR_I0FR:
+|DYN:%003:AV_CAL_CUR_I0RL:
+|DYN:%004:AV_CAL_CUR_I0RR:
+|DYN:%005:AV_CAL_CUR_IHFL:
+|DYN:%006:AV_CAL_CUR_IHFR:
+|DYN:%007:AV_CAL_CUR_IHRL:
+|DYN:%008:AV_CAL_CUR_IHRR:
+|DYN:%009:ECUCAL_RESULTS:
+|
+| Read out I0 starting from address %001
+?RT%001[h]00000002?
+?RT%002[h]00000002?
+?RT%003[h]00000002?
+?RT%004[h]00000002?
+|
+| Read out IH starting from address %005
+?RT%005[h]00000002?
+?RT%006[h]00000002?
+?RT%007[h]00000002?
+?RT%008[h]00000002?
+|
+| Read out ECU_CAL starting from address %009
+?RT%009[h]00000002?
+?RT%009[h+2]00000002?
+?RT%009[h+4]00000002?
+?RT%009[h+6]00000002?
+?RT%009[h+8]00000002?
+?RT%009[h+10]00000002?
