@@ -1,9 +1,0 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ContiTeves.Productionline.RamReadFileWcfService.Properties" GeneratedClassName="Settings">
-  <Profiles />
-  <Settings>
-    <Setting Name="EdmServiceUrl" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://fred001.auto.contiwan.com/Contiteves.EDM.Webservice.8/ReadService.asmx</Value>
-    </Setting>
-  </Settings>
-</SettingsFile>
